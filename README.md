@@ -19,8 +19,11 @@
   my.navigateToMiniProgram({
       appId: '2019102868708522',
       extraData:{
-        "appKey": "your appKey",
-        "adslotId": "your adslotId"
+        "appKey": "your appKey",   // 必传
+        "adslotId": "your adslotId", // 必传
+        "userId": " 用户唯一标识符号",  // 非必传
+        "device_id": "设备号", // 非必传
+        "miniAppId": " 小程序的唯一Id " // 非必传
       },
       success: (res) => {
         console.log(res)
