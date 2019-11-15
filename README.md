@@ -1,5 +1,8 @@
 # 推啊小程序媒体对接
 
+## 产品介绍
+![产品介绍](https://github.com/tuia-fed/tuia-ali-mini/blob/master/images/public.png)
+
 ## 对接流程
 
 1. 合作方媒体在推啊媒体平台 (https://ssp.tuia.cn) 注册账号
