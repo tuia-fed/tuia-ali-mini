@@ -21,7 +21,7 @@
   |:----|:-----:|:----:|
   | adslotId| 广告位id（从推啊媒体平台获取）| 是 |
   | appKey | 媒体的Key(从推啊媒体平台获取）| 是 |
-  | userId | 当前用户在媒体系统的唯一标识符（不能含特殊字符如```<,%```） | 是 |
+  | userId | 当前用户在媒体系统的唯一标识符（不能含特殊字符如```<,%```） | 是（生活号暂时不用传） |
   | miniAppId | 小程序的标识符 | 是小程序跳转，建议传。非小程序可以不传 |
   | device_id | 当前用户设备号，Andriod: imei, Ios: idfa(不能含特殊字符如```<,%```） | 保留字段，非必传 | 
   | debug | 当debug参数存在，推啊小程序会自动跳转到调试页面，媒体可以用来检验参数（推荐传入```debug:true```） | 开发时确定参数 |
@@ -81,6 +81,21 @@
   }
   ```
 其他APP 也同样,跳转时跳转完整参数
+
+### 生活号跳转
+
+下面以生活号广告位为例子。
+
+1. 创建广告位 跳转类型 选择跳转小程序，如果没有关联小程序需要先[关联推啊小程序](https://fuwu.alipay.com/platform/miniProgram.htm)
+![选择小程序](https://github.com/tuia-fed/tuia-ali-mini/blob/master/images/step1.png)
+
+2. 选择推啊小程序以后,填写相应的启动参数
+  * 小程序指定路径：```pages/index/index```
+  * 参数，详见 上面的参数说明。
+
+  ![填写参数](https://github.com/tuia-fed/tuia-ali-mini/blob/master/images/step2.png)
+
+其他位置跳转，流程也相似。
 
 ### debug
 
