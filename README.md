@@ -101,6 +101,8 @@
 
 开发时，为保证媒体可以检验到传的参数是否正确，```appKey,adslotId``` 是否被推啊小程序接收到，可以加入参数```debug:true```，推啊小程序会跳到一个参数页面，媒体可以查看传入小程序的参数是否一致。
 
+  ![debug](https://github.com/tuia-fed/tuia-ali-mini/blob/master/images/debug.png)
+
 ## 修订记录
 
 | 编号 | 内容 | 修订时间 | 影响范围 |
