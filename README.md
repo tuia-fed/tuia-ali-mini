@@ -39,6 +39,7 @@
   ```
   my.navigateToMiniProgram({
       appId: '2019102868708522',
+      path: 'pages/index/index'
       extraData:{
         "appKey": "your appKey",   // 必传
         "adslotId": "your adslotId", // 必传
