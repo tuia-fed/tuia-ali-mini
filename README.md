@@ -88,14 +88,32 @@
 下面以生活号广告位为例子。
 
 1. 创建广告位 跳转类型 选择跳转小程序，如果没有关联小程序需要先[关联推啊小程序](https://fuwu.alipay.com/platform/miniProgram.htm)
-![选择小程序](https://github.com/tuia-fed/tuia-ali-mini/blob/master/images/step1.png)
+跳转类型选择*跳转网页*（注意：不要选择小程序）
 
-2. 选择推啊小程序以后,填写相应的启动参数
-  * 小程序指定路径：```pages/index/index```
-  * 参数，详见 上面的参数说明。
+2. 网页链接拼接
+  ```
+  function toTuiaMini() {
+    let params = {
+      appKey: '12312321',
+      adslotId: '123123',
+      debug: 'true'
+    }
+    let appId = '2019102868708522'
+    let base = `alipays://platformapi/startapp?appId=${appId}&page=pages/index/index`
+    const eURICode = (obj) => {
+      let params = '?'
+      for (let i in obj) {
+        params += i + '=' + obj[i] + '&'
+      }
+      return encodeURIComponent(params)
+    }
+    return base + eURICode(params);
+  };
 
-  ![填写参数](https://github.com/tuia-fed/tuia-ali-mini/blob/master/images/step2.png)
-
+  console.log(toTuiaMini());
+```
+将函数执行结果，复制到链接中，*注意修改params中的参数值*
+  
 其他位置跳转，流程也相似。
 
 ### debug
