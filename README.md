@@ -1,4 +1,4 @@
-# 推啊小程序媒体对接
+# 推啊支付宝小程序媒体对接
 
 ## 产品介绍
 ![产品介绍](https://github.com/tuia-fed/tuia-ali-mini/blob/master/images/public.png)
@@ -29,7 +29,7 @@ https://tui.yiyhua.cn
 
 ![操作2](./images/alistep2.png)
 
-* 点击 **下载校验文件**，获取校验文件并放置在配置域名根目录下。
+* 点击 **下载校验文件** 并给到推啊，由推啊进行域名配置。
 
 ### 基础实现代码样例
 
