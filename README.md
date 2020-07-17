@@ -41,7 +41,7 @@ https://tui.yiyhua.cn
 <view>
 ```
 
-* js
+* js（通过appKey和adslotId方式打开）
 
 ```js
 Page({
@@ -52,10 +52,10 @@ Page({
   },
   onLoad() {
     const params = {
-      appKey: '', // your appKey
-      adslotId: '', // your adslotId
-      device_id: '', // 用户设备ID Andriod:imei;iOS:idfa
-      userId: '', // 用户唯一标识
+      appKey: '', // 必传 your appKey
+      adslotId: '', // 必传 your adslotId
+      device_id: '', // 非必传 用户设备ID Andriod:imei;iOS:idfa
+      userId: '', // 非必传 用户唯一标识
     }
     function serialize(obj) {
       return Object.keys(obj)
@@ -68,6 +68,25 @@ Page({
     }
     this.setData({
       src: `https://engine.aoclia.com/index/activity?${serialize(params)}`
+    })
+  }
+})
+```
+
+* js（通过媒体后台获取URL方式打开）
+URL类似如下：
+https://engine.aoclia.com/index/activity?appKey=appKey&adslotId=adslotId
+
+```js
+Page({
+  data() {
+    return {
+      src: ''
+    }
+  },
+  onLoad() {
+    this.setData({
+      src: `https://engine.aoclia.com/index/activity?appKey=appKey&adslotId=adslotId`
     })
   }
 })
@@ -90,7 +109,7 @@ Page({
   |:----|:-----:|:----:|
   | adslotId| 广告位id（从推啊媒体平台获取）| 是 |
   | appKey | 媒体的Key(从推啊媒体平台获取）| 是 |
-  | userId | 当前用户在媒体系统的唯一标识符（不能含特殊字符如```<,%```） | 是（生活号暂时不用传） |
+  | userId | 当前用户在媒体系统的唯一标识符（不能含特殊字符如```<,%```） | 否（涉及虚拟奖品发放时需要传） |
   | miniAppId | 小程序的标识符 | 是小程序跳转，建议传。非小程序可以不传 |
   | device_id | 当前用户设备号，Andriod: imei, Ios: idfa(不能含特殊字符如```<,%```） | 保留字段，非必传 |
   | debug | 当debug参数存在，推啊小程序会自动跳转到调试页面，媒体可以用来检验参数（推荐传入```debug:true```） | 开发时确定参数 |
@@ -198,3 +217,4 @@ Page({
 | 1 | 测试版 | 2019-11-13 | - |
 |2 | 生活号跳转内容修改 | 2019-12-12 | — |
 |3 | WebView组件打开推啊互动广告 | 2020-06-29 | — |
+|4 | - | 2020-07-17 | — |
