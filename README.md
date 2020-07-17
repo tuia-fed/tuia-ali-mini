@@ -41,7 +41,7 @@ https://tui.yiyhua.cn
 <view>
 ```
 
-* js（通过appKey和adslotId方式打开）
+* 方式一：js（通过appKey和adslotId方式打开）
 
 ```js
 Page({
@@ -73,7 +73,7 @@ Page({
 })
 ```
 
-* js（通过媒体后台获取URL方式打开）
+* 方式二：js（通过媒体后台获取URL方式打开）
 URL类似如下：
 https://engine.aoclia.com/index/activity?appKey=appKey&adslotId=adslotId
 
