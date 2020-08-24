@@ -101,7 +101,7 @@ Page({
 
 * 推啊小程序的appId 为
   ```
-  2019102868708522
+  2021001188689600
   ```
 * 跳转时需要带的参数
 
@@ -126,7 +126,7 @@ Page({
 
   ```js
   my.navigateToMiniProgram({
-      appId: '2019102868708522',
+      appId: '2021001188689600',
       path: 'pages/index/index'
       extraData:{
         "appKey": "your appKey",   // 必传
@@ -156,7 +156,7 @@ Page({
   function toTuiaMini() {
     let appKey = '2ZWJpMz5ZHnjaGSmi7xx9YdZnRE3'
     let adslotId = '317704'
-    let appId = '2019102868708522'
+    let appId = '2021001188689600'
     let userId = 'xxxx'
     let base = `alipays://platformapi/startapp?appId=${appId}&page=pages/index/index`
     const eURICode = (obj) => {
@@ -186,7 +186,7 @@ Page({
       adslotId: '123123',
       debug: 'true'
     }
-    let appId = '2019102868708522'
+    let appId = '2021001188689600'
     let base = `alipays://platformapi/startapp?appId=${appId}&page=pages/index/index`
     const eURICode = (obj) => {
       let params = '?'
