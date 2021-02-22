@@ -1,5 +1,7 @@
 # 推啊支付宝小程序媒体对接
 
+为了更好的用户体验，文档迁移至 [gitee](https://gitee.com/TFED/alipay-mini-app)
+
 ## 产品介绍
 ![产品介绍](https://github.com/tuia-fed/tuia-ali-mini/blob/master/images/public.png)
 
